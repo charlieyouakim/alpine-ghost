@@ -1,0 +1,14 @@
+charlieyouakim.com {
+			proxy / charlieyouakim.com:2368
+
+			header / {
+				X-Frame-Options DENY
+				X-Content-Type-Options nosniff
+				X-XSS-Protection "1; mode=block"
+				Strict-Transport-Security "max-age=7776000; includeSubDomains"
+			}
+
+			gzip
+
+			tls charlie.youakim@gmail.com
+}

@@ -1,0 +1,9 @@
+# Example Development Build
+version: '2'
+services:
+    ghost:
+        image:  zzrot/alpine-ghost
+        volumes:
+            -   /Users/charlesyouakim/ghostblogtest:/var/lib/ghost/
+        ports:
+            -   2368:2368

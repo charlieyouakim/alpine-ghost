@@ -1,0 +1,28 @@
+# Example Production Build
+version: '2'
+services:
+    ghost:
+        image: zzrot/alpine-ghost
+        environment:
+          PROD_DOMAIN: http://charlieyouakim.com/blog
+          NODE_ENV: production
+        volumes:
+            -   /var/www/ghostblog:/var/lib/ghost/
+        ports:
+            - 2368:2368
+        networks:
+            -   frontend
+    proxy:
+        image: zzrot/alpine-caddy
+        ports:
+            -   "80:80"
+            -   "443:443"
+        expose:
+            - 2368
+        volumes:
+            -   ./compose/proxy/Caddyfile:/etc/Caddyfile
+            -   ./.caddy:/root/.caddy
+        networks:
+            -   frontend
+networks:
+    frontend:
