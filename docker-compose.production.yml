@@ -20,7 +20,7 @@ services:
         expose:
             - 2368
         volumes:
-            -   ./compose/proxy/Caddyfile:/etc/Caddyfile
+            -   ./Caddyfile:/etc/Caddyfile
             -   ./.caddy:/root/.caddy
         networks:
             -   frontend
