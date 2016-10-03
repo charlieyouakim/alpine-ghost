@@ -1,5 +1,5 @@
 charlieyouakim.com {
-			proxy / ghost:2368
+			proxy / charlieyouakim.com:2368
 
 			header / {
 				X-Frame-Options DENY
