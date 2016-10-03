@@ -4,7 +4,7 @@ services:
     ghost:
         image: zzrot/alpine-ghost
         environment:
-          PROD_DOMAIN: http://charlieyouakim.com/blog
+          PROD_DOMAIN: http://charlieyouakim.com
           NODE_ENV: production
         volumes:
             -   /var/www/ghostblog:/var/lib/ghost/
